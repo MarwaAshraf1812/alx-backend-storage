@@ -4,6 +4,4 @@
 -- crash, etc… to keep your data in a good shape, let MySQL do it for you!
 
 CREATE TRIGGER decrease_quantity AFTER INSERT ON orders for EACH ROW
-BEGIN
-    UPDATE items SET quantity = quantity - NEW.number WHERE id = NEW.item_id;
-END;
+UPDATE items SET quantity = quantity - NEW.number WHERE name=NEW.item_name;
