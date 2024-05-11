@@ -5,7 +5,7 @@
 -- country, enum of countries: US, CO and TN, never null (default=US)
 -- If table exists, script will not fail, can be executed on any database
 
-CREATE TABLE IF NOT EXISTS USERS (
+CREATE TABLE IF NOT EXISTS users (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     email varchar(255) NOT NULL UNIQUE,
     name VARCHAR(255),
